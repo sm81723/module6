@@ -17,6 +17,7 @@ class Whale(Sprite):
         self.image = pygame.image.load('images/killerwhale.bmp')
         self.rect = self.image.get_rect()
 
+        # todo change this to spawn enemy on furthest right edge of world
         # Create each whale at a random position on the right edge of the screen.
         self.rect.left = self.screen.get_rect().right
 

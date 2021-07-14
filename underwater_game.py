@@ -21,12 +21,14 @@ from whale import Whale
 # todo need to use setup.py
 # todo improve level transition?
 
+# todo I think the level requirement is getting altered by the dynamic settings...
+
 
 class Background(Sprite):
     def __init__(self, *args):
         super().__init__(*args)
         self.settings = Settings()
-        self.image = pygame.image.load("images/seabackground.png")
+        self.image = pygame.image.load("images/seabackground.png").convert()
         self.rect = self.image.get_rect()
         self.rect.bottom = self.settings.screen_height
 
@@ -60,7 +62,7 @@ class UnderwaterGame:
 
         self.static_sprites = Group()
         self.static_sprites.add(Background())
-        self.viewport = Viewport
+        self.viewport = Viewport()
 
         self.play_button = Button(self, "Play")
 

@@ -10,7 +10,7 @@ class Settings:
 
         # todo can't get this working... also current background image width is 2400
         # Scrolling Screen
-        self.world_width = 2 * self.screen_width
+        self.world_width = 2400
 
         # Submarine Settings
         self.submarine_limit = 4
